@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "URL Switcher",
+    "version": "1.0",
+    "description": "快速切換生產環境和測試環境的URL。",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "64": "images/icons8-broken-link-64.png"
+        }
+    },
+    "icons": {
+        "64": "images/icons8-broken-link-64.png"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }]
+}
